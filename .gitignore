@@ -1,0 +1,15 @@
+.idea
+.vscode
+
+data/1001fonts/fonts
+data/1001fonts/images
+
+# Python virtual enviroment 
+trainer/env
+
+node_modules
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
