@@ -7,13 +7,11 @@ The styles I want to detect are 'Poster', 'Comic', 'Retro', 'Techno', 'Futuristi
 
 ## The problem
 
-When you have many fonts on your computer, it's too hard to remember them all. 
-Sometimes it would be great to filter fonts by its stylistic. 
-But font files don't have stylistic metadata.
-Hence, **graphic designers suffer**. 
+It's too hard to remember all the fonts you have locally on your computer if you're a designer and have a lot of them.
+Sometimes it would be great to filter fonts by their stylistics like 'Poster', 'Retro' etc. 
+But font files don't have this stylistic metadata so you cannot do it. **Graphic designers suffer**. 
 
-
-### Project structure
+## Project structure
 ```sh
     .
     ├── data                   # Scraped and generated data which is used to train models
@@ -25,15 +23,24 @@ Hence, **graphic designers suffer**.
     └── README.md
 ```
 
+## How it works?
+The project contains three sub-projects: **`Scraper`**, **`Generator`** and **`Trainer`**. 
+### [Scraper](./scraper)
+**NodeJS** application that scrapes sites with fonts. It fetches information about name, description, **tags** and links to download. Then it downloads fonts into [data folder](./data) and saves map file with their metadata fetched from site. 
+### [Generator](./generator)
+**NodeJS** application that generates images with characters (in one image) for each font and creates a map file to link tags with the image. The neural network uses this images to train and valid itself.
+> Generator also checks if the downloaded font has all drawn characters and misses it if not. 
+### [Trainer](./trainer) 
+**Python** project that uses Keras framework to build and train the neural network models. It uses real-time data augmentation to fight with overfitting and to avoid memory overloading. 
+
 ## Results
-The project is under development.
+> The project is under development.
 
 ## Build
 #### First step
 You should install Python, PIP, VirtualEnv, NodeJS 10+, Python 3.6.1
 #### Second step
-All steps you should do is described in makefile.\
-To run make file type:
+Run make file:
 ```sh
 $ cd <project_folder>
 $ make
