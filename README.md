@@ -34,7 +34,7 @@ The project contains three sub-projects: **`Scraper`**, **`Generator`** and **`T
 **Python** project that uses Keras framework to build and train the neural network models. It uses real-time data augmentation to fight with overfitting and to avoid memory overloading. 
 
 ## Results
-> The project is under development.
+> The project is not developing now.
 
 ## Build
 #### First step
