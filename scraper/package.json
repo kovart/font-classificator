@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.6.2",
+    "async": "^3.2.2",
     "cheerio": "^1.0.0-rc.2",
     "download": "^7.1.0",
     "fs-extra": "^7.0.1",
