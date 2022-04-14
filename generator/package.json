@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.6.2",
+    "async": "^3.2.2",
     "canvas": "^2.3.1",
     "comma-separated-values": "^3.6.4",
     "opentype.js": "^0.11.0"
